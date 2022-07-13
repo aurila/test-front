@@ -1,12 +1,34 @@
 import React from 'react'
 import './App.css'
-import Router from './router/Router'
+import Router from './router/router'
+import { createGlobalStyle } from 'styled-components'
+
+const GlobalStyles = createGlobalStyle`
+html{
+  --selected-color: #FF7800;
+  --unselected-color: #CCC;
+  --title-color: #999;
+  --neutral-background: #fff;
+  --border-color-container: #EEE;
+  --border-color-price: #CCC;
+  --text-color: #212122;
+  --button-color: #FF6C00;
+  --button-hover-color: #D45A00;
+
+  *{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+`
 
 const App = () => (
-  <div className="App">
-    Boa sorte! 🚀
+  <>
+    <GlobalStyles />
     <Router />
-  </div>
+  </>
 )
 
 export default App
