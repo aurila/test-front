@@ -15,6 +15,9 @@ html{
   --button-color: #FF6C00;
   --button-hover-color: #D45A00;
 
+  background-color: #EEE;
+  width: 360px;
+
   *{
     margin: 0;
     padding: 0;

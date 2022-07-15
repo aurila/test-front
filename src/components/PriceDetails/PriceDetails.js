@@ -6,7 +6,8 @@ const TotalProducts = styled.div`
   width: 341px;
   margin: 10px;
 
-  border: 1px solid blueviolet;
+  border-radius: 3px;
+  border: 1px solid #ccc;
 `
 const Infos = styled.ul`
   display: flex;
@@ -56,24 +57,24 @@ const TotalPrice = styled.li`
   text-align: right;
 `
 
-function PriceDetails() {
+function PriceDetails(props) {
   return (
     <TotalProducts>
       <Infos>
         <InfoPrice>Produtos</InfoPrice>
-        <Price>preço</Price>
+        <Price>{props.ProductsSum}</Price>
       </Infos>
       <Infos>
         <InfoPrice>Frete</InfoPrice>
-        <Price>preço</Price>
+        <Price>{props.ShippingPrice}</Price>
       </Infos>
       <Infos>
         <InfoDiscount>Desconto</InfoDiscount>
-        <PriceDiscount>preço</PriceDiscount>
+        <PriceDiscount>{props.Discount}</PriceDiscount>
       </Infos>
       <Infos>
         <Total>Total</Total>
-        <TotalPrice>preço</TotalPrice>
+        <TotalPrice>{props.Total}</TotalPrice>
       </Infos>
     </TotalProducts>
   )
