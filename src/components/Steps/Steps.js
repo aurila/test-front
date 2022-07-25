@@ -8,7 +8,7 @@ const StepsContainer = styled.div`
   height: 36px;
 `
 const StepsNames = styled.ul`
-  margin-left: 20px;
+  margin: auto;
   display: flex;
 `
 const StepsOptions = styled.a`

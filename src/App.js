@@ -1,5 +1,5 @@
 import React from 'react'
-import './App.css'
+
 import Router from './router/router'
 import { createGlobalStyle } from 'styled-components'
 
@@ -16,7 +16,7 @@ html{
   --button-hover-color: #D45A00;
 
   background-color: #EEE;
-  width: 360px;
+
 
   *{
     margin: 0;
