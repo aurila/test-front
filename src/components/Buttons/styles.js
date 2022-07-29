@@ -1,16 +1,16 @@
-import React from 'react'
 import styled from 'styled-components'
-import { useNavigate } from 'react-router-dom'
 
-const Buttonstyle = styled.button`
+export const ButtonStyle = styled.button`
   height: 60px;
   width: 90%;
   background-color: var(--button-color);
-  box-shadow: inset 0 -3px 0 0 #d45a00, 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 -3px 0 0 var(--button-hover-color) inset;
   border: 1px solid var(--button-color);
   border-radius: 3px;
   margin: 10px auto;
   display: flex;
+
   @media (min-width: 500px) {
     width: 400px;
     margin: 10px auto;
@@ -21,7 +21,7 @@ const Buttonstyle = styled.button`
   }
 `
 
-const ButtonText = styled.p`
+export const ButtonText = styled.p`
   height: 24px;
   width: 100%;
   color: #fff;
@@ -33,14 +33,3 @@ const ButtonText = styled.p`
   margin: auto;
   text-transform: uppercase;
 `
-
-function ButtonToPayment() {
-  const navigate = useNavigate()
-  return (
-    <Buttonstyle onClick={() => navigate('/payment')}>
-      <ButtonText>Seguir para o pagamento</ButtonText>
-    </Buttonstyle>
-  )
-}
-
-export default ButtonToPayment

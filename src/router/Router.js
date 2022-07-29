@@ -1,9 +1,9 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Steps from '../components/Steps/Steps'
-import BasketPage from '../pages/BasketPage'
-import ConfirmPage from '../pages/ConfirmPage'
-import PaymentPage from '../pages/PaymentPage'
+import BasketPage from '../pages/BasketPage/BasketPage'
+import ConfirmPage from '../pages/ConfirmPage/ConfirmPage'
+import PaymentPage from '../pages/PaymentPage/PaymentPage'
 
 function Router() {
   return (

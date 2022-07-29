@@ -1,37 +1,29 @@
-import React from 'react'
-
+import React, { useEffect, useState } from 'react'
 import Router from './router/router'
-import { createGlobalStyle } from 'styled-components'
+import { ContextPriceDetails } from './context/ContextPriceDetails'
+import axios from 'axios'
+import { GlobalStyles } from './styles'
 
-const GlobalStyles = createGlobalStyle`
-html{
-  --selected-color: #FF7800;
-  --unselected-color: #CCC;
-  --title-color: #999;
-  --neutral-background: #fff;
-  --border-color-container: #EEE;
-  --border-color-price: #CCC;
-  --text-color: #212122;
-  --button-color: #FF6C00;
-  --button-hover-color: #D45A00;
+const App = () => {
+  const [productData, setProductData] = useState()
 
-  background-color: #EEE;
+  useEffect(() => {
+    axios
+      .get('http://www.mocky.io/v2/5b15c4923100004a006f3c07')
+      .then((response) => {
+        setProductData(response.data)
+      })
+      .catch(console.error)
+  }, [])
 
-
-  *{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+  return (
+    <>
+      <GlobalStyles />
+      <ContextPriceDetails.Provider value={productData}>
+        <Router />
+      </ContextPriceDetails.Provider>
+    </>
+  )
 }
-
-`
-
-const App = () => (
-  <>
-    <GlobalStyles />
-    <Router />
-  </>
-)
 
 export default App

@@ -1,3 +1,3 @@
 import { createContext } from 'react'
 
-export const ContextPriceDetails = createContext()
+export const ContextPriceDetails = createContext({})
