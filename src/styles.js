@@ -7,10 +7,10 @@ html{
   --title-color: #999;
   --neutral-background: #fff;
   --border-color-container: #EEE;
-  --border-color-price: #CCC;
   --text-color: #212122;
   --button-color: #FF6C00;
   --button-hover-color: #D45A00;
+  --placeholder-color: #E0E7EE;
 
   background-color: #EEE;
 

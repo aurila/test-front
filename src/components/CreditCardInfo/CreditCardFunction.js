@@ -7,7 +7,12 @@ export default function CreditCardFunction() {
       <S.CreditCard>
         <S.CardInfo for="cardnumber">
           Número do cartão:
-          <S.CreditCardNumber id="cardnumber" type="tel" name="number" />
+          <S.CreditCardNumber
+            placeholder="____.____.____.____"
+            id="cardnumber"
+            type="tel"
+            name="number"
+          />
         </S.CardInfo>
         <S.CardInfo for="cardholdername">
           Nome do Titular:
@@ -22,14 +27,13 @@ export default function CreditCardFunction() {
           <S.DivValidity>
             <S.CardInfo for="validity">
               Validade(mês/ano):
-              <S.CreditCardValidity id="validity" type="data" name="expiry" />
+              <S.CreditCardValidity placeholder="__/____" id="validity" type="data" name="expiry" />
             </S.CardInfo>
           </S.DivValidity>
 
           <S.CardInfo for="cvv">
-            {' '}
             CVV:
-            <S.CreditCardCVV id="cvv" type="tel" name="cvv" />
+            <S.CreditCardCVV placeholder="___" id="cvv" type="tel" name="cvv" />
           </S.CardInfo>
         </S.DivInput>
       </S.CreditCard>

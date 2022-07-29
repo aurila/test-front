@@ -19,6 +19,13 @@ export const CreditCardNumber = styled.input`
   border: 1px solid #e7e7e7;
   box-shadow: 1px 1px 5px 0 rgba(0, 0, 29, 0.22);
   margin: 5px 2% 15px 2%;
+  padding-left: 13px;
+
+  &::placeholder {
+    color: var(--placeholder-color);
+    letter-spacing: 1.37px;
+    font-size: 16px;
+  }
 `
 
 export const CardHolderName = styled.input`
@@ -28,9 +35,11 @@ export const CardHolderName = styled.input`
   border: 1px solid #e7e7e7;
   box-shadow: 1px 1px 5px 0 rgba(0, 0, 29, 0.22);
   margin: 5px 2% 15px 2%;
+  padding-left: 13px;
 
   &::placeholder {
-    color: #ccc;
+    color: var(--placeholder-color);
+    font-size: 16px;
   }
 `
 export const CreditCardValidity = styled.input`
@@ -42,6 +51,13 @@ export const CreditCardValidity = styled.input`
   display: flex;
   align-content: flex-start;
   margin: 5px;
+  padding-left: 13px;
+
+  &::placeholder {
+    color: var(--placeholder-color);
+    letter-spacing: 1.37px;
+    font-size: 16px;
+  }
 `
 export const CreditCardCVV = styled.input`
   width: 90%;
@@ -50,6 +66,13 @@ export const CreditCardCVV = styled.input`
   border: 1px solid #e7e7e7;
   box-shadow: 1px 1px 5px 0 rgba(0, 0, 29, 0.22);
   margin: 5px;
+  padding-left: 13px;
+
+  &::placeholder {
+    color: var(--placeholder-color);
+    letter-spacing: 1.37px;
+    font-size: 16px;
+  }
 `
 export const DivInput = styled.div`
   display: flex;
